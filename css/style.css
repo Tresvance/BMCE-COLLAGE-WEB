@@ -7,6 +7,7 @@
   Version: 1.1
 */
 
+
 /* CSS Index 
 -----------------------------------
 1. Theme default
@@ -60,7 +61,10 @@
 }
 
 img {
-	max-width: 73%;
+	max-width: 100%;
+
+
+
 }
 
 a:focus,
