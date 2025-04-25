@@ -542,10 +542,10 @@ p {
     padding: 25px 0;
 }
 
-.navigation .navbar .navbar-nav > li > a.active,
+/* .navigation .navbar .navbar-nav > li > a.active,
 .navigation .navbar .navbar-nav > li > a:hover{
     color: #ffc600;
-}
+} */
 
 .navigation .navbar .navbar-nav li .sub-menu{
     position: absolute;
