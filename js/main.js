@@ -395,6 +395,10 @@ $(function() {
     });
     
     
+
+  AOS.init();
+
+
     
     
     
