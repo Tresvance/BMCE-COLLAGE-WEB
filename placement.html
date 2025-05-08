@@ -4,82 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Development & Placement Cell | University Name</title>
+
+       <!--====== Favicon Icon ======-->
+       <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/png">
+
+       <!--====== Slick css ======-->
+       <link rel="stylesheet" href="css/slick.css">
+   
+       <!--====== Animate css ======-->
+       <link rel="stylesheet" href="css/animate.css">
+       
+       <!--====== Nice Select css ======-->
+       <link rel="stylesheet" href="css/nice-select.css">
+       
+       <!--====== Nice Number css ======-->
+       <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+   
+       <!--====== Magnific Popup css ======-->
+       <link rel="stylesheet" href="css/magnific-popup.css">
+   
+       <!--====== Bootstrap css ======-->
+       <link rel="stylesheet" href="css/bootstrap.min.css">
+       
+       <!--====== Fontawesome css ======-->
+       <link rel="stylesheet" href="css/font-awesome.min.css">
+       
+       <!--====== Default css ======-->
+       <link rel="stylesheet" href="css/default.css">
+       
+       <!--====== Style css ======-->
+       <link rel="stylesheet" href="css/style.css">
+       
+       <!--====== Responsive css ======-->
+       <link rel="stylesheet" href="css/responsive.css">
     <style>
-        :root {
-            --primary-color: #003366;
-            --secondary-color: #f8f8f8;
-            --accent-color: #ff6633;
-            --text-color: #333;
-            --light-text: #fff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: var(--light-text);
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .logo span {
-            color: var(--accent-color);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: var(--light-text);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
+   
+
         
         /* Hero Banner */
         .hero-banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/400');
+            background: linear-gradient(rgba(42, 113, 236, 0.963), rgba(234, 235, 232, 0.7)), url('/api/placeholder/1200/400');
             background-size: cover;
             background-position: center;
             color: var(--light-text);
@@ -115,10 +79,7 @@
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
-        
-        .btn:hover {
-            background-color: #e65c2e;
-        }
+      
         
         /* About Section */
         .about-section {
@@ -536,23 +497,185 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">UNIVERSITY<span>NAME</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#placements">Placements</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+
+
+    <!--====== PRELOADER PART START ======-->
     
+       <div class="preloader">
+        <img src="images/favicon/favicon.svg" alt="Loading..." class="preloader-image">
+    </div>
+    <!--====== PRELOADER PART START ======-->
+
+
+    <!-- Header -->
+    <header id="header-part">
+       
+        <div class="header-top d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact text-lg-left text-center">
+                            <ul>
+                                <li><img src="images/all-icon/map.png" alt="icon"><span>Sastamcotta, Kollam</span></li>
+                                <li><img src="images/all-icon/email.png" alt="icon"><span>bm2coe@gmail.com</span></li>
+                           
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header-opening-time text-lg-right text-center">
+                            <p>Opening Hours : Monday to Saturay - 8 Am to 5 Pm</p>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header top -->
+        
+        <div class="header-logo-support pt-30 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="logo">
+                            <a href="index.html">
+                                <!-- <img src="images/finalbmc.png" alt="Logo"> -->
+                                <img src="images/finalelogo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="support-button float-right d-none d-md-block">
+                            <div class="button float-left">
+                                <a href="#" class="main-btn">Apply For Admission</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header logo support -->
+        
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-9 col-8">
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a>About</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">About BMCE</a></li>
+                                            <li><a href="">Vision & Mission</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Courses</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">BTech (4 Year)</a>
+                                                <ul class="sub-sub-menu">
+                                                    <li><a href="#">Computer Science & Engineering</a></li>
+                                                    <li><a href="#">Artificial Intelligence</a></li>
+                                                    <li><a href="#">Civil Engineering</a></li>
+                                                    <li><a href="#">Electronics & Communication Engineering</a></li>
+                                                    <li><a href="#">Mechanical Engineering</a></li>
+                                                    <li><a href="#">Electrical & Electronics Engineering</a></li>
+                                                </ul>
+                                            </li>
+                                        
+                                            <li><a href="#">Diploma (3 Year)</a>
+                                                <ul class="sub-sub-menu">
+                                                    <li><a href="#">Automobile Engineering</a></li>
+                                                    <li><a href="#">Civil Engineering</a></li>
+                                                    <li><a href="#">Computer Science & Engineering</a></li>
+                                                    <li><a href="#">Mechanical Engineering</a></li>
+                                                    <li><a href="#">Electrical Engineering - Electric Vehicle Technology</a></li>
+                                                </ul>
+                                            </li>
+                                        
+                                            <li><a href="#">MBA (2 Year)</a>
+                                                <ul class="sub-sub-menu">
+                                                    <li><a href="#">Finance</a></li>
+                                                    <li><a href="#">HRM</a></li>
+                                                    <li><a href="#">Marketing</a></li>
+                                                    <li><a href="#">MBA + CMA</a></li>
+                                                    <li><a href="#">MBA + ACCA</a></li>
+                                                    <li><a href="#">MBA + Business Analytics</a></li>
+                                                    <li><a href="#">MBA + Data Analytics</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        
+                                    </li>                                    
+                                    
+                                    <li class="nav-item">
+                                        <a href="">Administrartion</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">Our team</a></li>
+                                            <li><a href="">Directors message</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Academics</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">Student Assessmnet</a></li>
+                                            <li><a href="">Faculty Assesmentl</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Activities</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">NSS</a></li>
+                                            <li><a href="">IEEE</a></li>
+                                            <li><a href="">IEDC</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="placement.html">Placments</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">CGPU</a></li>
+                                            <li><a href="">Placment Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Research</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">Research at glance</a></li>
+                                            <li><a href="">Publications</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Facilities</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="">Library</a></li>
+                                            <li><a href="">IT Infrastructure</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Gallery</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav> <!-- nav -->
+                    </div>
+                  
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div>
+        
+    </header>
     <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-content">
@@ -732,85 +855,8 @@
         </div>
     </section>
     
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Placement Cell</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <p>Placement Cell, Administrative Block</p>
-                            <p>University Name Campus</p>
-                            <p>City, State - Pincode</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <p>+91 1234567890</p>
-                            <p>+91 9876543210</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <p>placements@universityname.edu</p>
-                            <p>careers@universityname.edu</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="queryForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+  
     
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#placements">Placements</a>
-                <a href="#resources">Resources</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="social-icons">
-                <a href="#">FB</a>
-                <a href="#">TW</a>
-                <a href="#">IG</a>
-                <a href="#">LI</a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Career Development & Placement Cell, University Name. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
     <script>
@@ -937,12 +983,7 @@
             }
         });
         
-        // Form submission
-        document.getElementById('queryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your query! We will get back to you soon.');
-            this.reset();
-        });
+     
         
         // Animate stats on scroll
         const stats = document.querySelectorAll('.stat-number');
@@ -976,6 +1017,59 @@
         }
         
         window.addEventListener('scroll', animateStats);
+    </script>
+
+    <!--====== jquery js ======-->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="js/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="js/jquery.nice-select.min.js"></script>
+    
+    <!--====== Nice Number js ======-->
+    <script src="js/jquery.nice-number.min.js"></script>
+    
+    <!--====== Count Down js ======-->
+    <script src="js/jquery.countdown.min.js"></script>
+    
+    <!--====== Validator js ======-->
+    <script src="js/validator.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="js/ajax-contact.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="js/main.js"></script>
+    
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="js/map-script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Show popup after page load
+        window.onload = function() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        // Function to close popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
     </script>
 </body>
 </html>
