@@ -3719,4 +3719,13 @@
 }
 
 
+.bg-primary-gradient {
+    background: linear-gradient(135deg, #3a47d5, #00d2ff);
+}
+
+.bg-success-gradient {
+    background: linear-gradient(135deg, #AE0000, #800000);
+}
+
+
 
