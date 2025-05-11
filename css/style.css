@@ -4291,3 +4291,87 @@ placment page  css */
                 flex-basis: 50%;
             }
         }
+Our Highlights/*  */
+
+.events-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.vertical-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 40px;
+  font-weight: bold;
+  color: #082e57;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.events-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.events-slider {
+  display: flex;
+  gap: 30px;
+}
+
+.event-card {
+  width: 400px;
+  background: #fdf8f9;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.event-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.event-date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #082e57;
+  color: white;
+  width: 70px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.event-date .day {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.event-date .month {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.event-title {
+  padding: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.slider-controls .arrow {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #082e57;
+  background: white;
+  color: #082e57;
+  cursor: pointer;
+}
