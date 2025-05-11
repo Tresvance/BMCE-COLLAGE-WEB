@@ -31,7 +31,7 @@
   }
   
   a:hover {
-    color: var(--secondary-color);
+    color: red;
   }
   
   .btn-primary {
@@ -430,7 +430,7 @@ padding: 0;
 }
 
 .footer-logo {
-  max-width: 120px;
+  max-width: 100%;
   height: auto;
 }
 
