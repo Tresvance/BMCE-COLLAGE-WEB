@@ -60,11 +60,14 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-	max-width: 100%;
-
-
-
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between images */
+}
+.logo img {
+	max-height: 60px; /* control image size uniformly */
+    width: auto;
 }
 
 a:focus,
