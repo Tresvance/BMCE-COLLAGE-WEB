@@ -55,6 +55,19 @@
     padding: 1rem 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+
+.news-ticker {
+  background-color:#07294d ;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  position: relative;
+  margin-bottom: -16px;
+  margin-top: -15px;
+} 
 /*=====================================================
     3. SLIDER css 
 ======================================================*/
