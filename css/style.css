@@ -78,8 +78,8 @@
     padding: 8px;
     font-size: 15px;
     position: relative;
-    margin-top: -15px;
     margin-bottom: -16px;
+    margin-top: -15px;
   }
   
   .news-items {
@@ -416,6 +416,7 @@ p {
     position: absolute;
     top: 110%;
     left: 0;
+    margin-top: -20px;
     background-color: #07294d;
     width: 200px;
     opacity: 0;
