@@ -4552,7 +4552,9 @@ placment page  css */
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  padding: 40px 0;
+  padding: 40px 0 40px 40px;  
+  width: 90%;              /* or any fixed width like 1000px */
+  margin: 0 auto;  
 }
 
 .vertical-label {
