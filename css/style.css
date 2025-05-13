@@ -98,6 +98,7 @@
     height: 110%;
     object-fit: cover;
     z-index: -1;
+
   }
   
   @keyframes scroll-left {
@@ -4547,14 +4548,13 @@ placment page  css */
             }
         }
 
-
 .events-container {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  padding: 40px 0 40px 40px;  
-  width: 90%;              /* or any fixed width like 1000px */
-  margin: 0 auto;  
+  padding: 40px 40px;
+  width: 88%;              /* or any fixed width like 1000px */
+  margin: 0 auto; 
 }
 
 .vertical-label {
@@ -4580,15 +4580,24 @@ placment page  css */
 
 .event-card {
   width: 400px;
-  background: #fdf8f9;
+  background: #082e57;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
 .event-image {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  height: 540px; /* Increased height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .event-date {
@@ -4615,7 +4624,9 @@ placment page  css */
 .event-title {
   padding: 20px;
   font-size: 18px;
-  color: #333;
+  color: white;
+  font-weight: bold;      /* Make text bold */
+  text-align: center;     /* Center the text */
 }
 
 .slider-controls {
