@@ -107,133 +107,148 @@
             </div> <!-- container -->
         </div> <!-- header logo support -->
         
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-md-10 col-sm-9 col-8">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+                <!--====== SIDEBAR START ======-->
+        <aside class="sidebar">
+        <ul class="links">
+            <h4>Main Menu</h4>
+            <li class="nav-list-item">
+            <a href="index.html" class="nav-link">
+                <span class="link-text">Index</span>
+            </a>
+            </li>
+            <li class="nav-list-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Home</span>
+            </a>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="about.html" class="nav-link">
+                <span class="link-text">About</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="about.html">About BMCE</a></li>
+                <li><a href="#">Our Campus</a></li>
+                <li><a href="accreditation.html">Accreditation</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Courses</span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                <a href="#">BTech (4 Year)</a>
+                <ul class="sub-sub-menu">
+                    <li><a href="#">Computer Science & Engineering</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Civil Engineering</a></li>
+                    <li><a href="#">Electronics & Communication Engineering</a></li>
+                    <li><a href="#">Mechanical Engineering</a></li>
+                    <li><a href="#">Electrical & Electronics Engineering</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">Diploma (3 Year)</a>
+                <ul class="sub-sub-menu">
+                    <li><a href="#">Automobile Engineering</a></li>
+                    <li><a href="#">Civil Engineering</a></li>
+                    <li><a href="#">Computer Science & Engineering</a></li>
+                    <li><a href="#">Mechanical Engineering</a></li>
+                    <li><a href="#">Electrical Engg - EV Tech</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">MBA (2 Year)</a>
+                <ul class="sub-sub-menu">
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">HRM</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">MBA + CMA</a></li>
+                    <li><a href="#">MBA + ACCA</a></li>
+                    <li><a href="#">MBA + Business Analytics</a></li>
+                    <li><a href="#">MBA + Data Analytics</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Administration</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="#">Our team</a></li>
+                <li><a href="#">Director's message</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Academics</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="#">Student Assessment</a></li>
+                <li><a href="#">Faculty Assessment</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Activities</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="#">NSS</a></li>
+                <li><a href="#">IEEE</a></li>
+                <li><a href="#">IEDC</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Placements</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="#">CGPU</a></li>
+                <li><a href="#">Placement Details</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Research</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="#">Research at a Glance</a></li>
+                <li><a href="#">Publications</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Facilities</span>
+            </a>
+            <ul class="sub-menu">
+                <li><a href="#">Library</a></li>
+                <li><a href="#">IT Infrastructure</a></li>
+            </ul>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Gallery</span>
+            </a>
+            </li>
+            <li class="nav-list-item nav-item">
+            <a href="#" class="nav-link">
+                <span class="link-text">Contact</span>
+            </a>
+            </li>
+        </ul>
+        </aside>
+        <button id="sidebar-toggle" class="sidebar-toggle-btn">☰</button>
+<!--====== SIDEBAR ENDS ======-->
+        <script>
+        const toggleBtn = document.getElementById("sidebar-toggle");
+        const sidebar = document.querySelector(".sidebar");
 
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item">
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a>About</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="about.html">About BMCE</a></li>
-                                            <li><a href="">Our Campus</a></li>
-                                            <li><a href="accreditation.html">Accreditation</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="">Courses</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">BTech (4 Year)</a>
-                                                <ul class="sub-sub-menu">
-                                                    <li><a href="csdepartment/csoverview.html">Computer Science & Engineering</a></li>
-                                                    <li><a href="#">Artificial Intelligence</a></li>
-                                                    <li><a href="#">Civil Engineering</a></li>
-                                                    <li><a href="#">Electronics & Communication Engineering</a></li>
-                                                    <li><a href="#">Mechanical Engineering</a></li>
-                                                    <li><a href="#">Electrical & Electronics Engineering</a></li>
-                                                </ul>
-                                            </li>
-                                        
-                                            <li><a href="#">Diploma (3 Year)</a>
-                                                <ul class="sub-sub-menu">
-                                                    <li><a href="#">Automobile Engineering</a></li>
-                                                    <li><a href="#">Civil Engineering</a></li>
-                                                    <li><a href="#">Computer Science & Engineering</a></li>
-                                                    <li><a href="#">Mechanical Engineering</a></li>
-                                                    <li><a href="#">Electrical Engineering - Electric Vehicle Technology</a></li>
-                                                </ul>
-                                            </li>
-                                        
-                                            <li><a href="#">MBA (2 Year)</a>
-                                                <ul class="sub-sub-menu">
-                                                    <li><a href="#">Finance</a></li>
-                                                    <li><a href="#">HRM</a></li>
-                                                    <li><a href="#">Marketing</a></li>
-                                                    <li><a href="#">MBA + CMA</a></li>
-                                                    <li><a href="#">MBA + ACCA</a></li>
-                                                    <li><a href="#">MBA + Business Analytics</a></li>
-                                                    <li><a href="#">MBA + Data Analytics</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        
-                                    </li>                                    
-                                    
-                                    <li class="nav-item">
-                                        <a href="">Administrartion</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="">Our team</a></li>
-                                            <li><a href="">Directors message</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="">Academics</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="">Student Assessmnet</a></li>
-                                            <li><a href="">Faculty Assesmentl</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="">Activities</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="">NSS</a></li>
-                                            <li><a href="">IEEE</a></li>
-                                            <li><a href="">IEDC</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="placement.html">Placments</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="">CGPU</a></li>
-                                            <li><a href="">Placment Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="">Research</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="">Research at glance</a></li>
-                                            <li><a href="">Publications</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="">Facilities</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="">Library</a></li>
-                                            <li><a href="">IT Infrastructure</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="">Gallery</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav> <!-- nav -->
-                    </div>
-                  
-                </div> <!-- row -->
-            </div> <!-- container -->
-            <div class="news-ticker">
-                <div class="news-items">
-                  <span>🔔 Admission Open for 2026 Batch | </span>
-                  <span>📢 NAAC Accredited with B+ Grade | </span>
-                  <span>🎓 100% Placement Assistance</span>
-                </div>
-            </div>
-        </div>
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("expanded");
+        });
+        </script>
+
         
     </header>
     
