@@ -357,42 +357,43 @@ p {
 
 
 
-/* Sidebar styling */
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 0px; /* collapsed */
+    width: 50px;
     height: 100vh;
-    background: rgba(255, 255, 255, 0); /* transparent */
+    background: #07294d;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border-radius: 15px 0 0 15px;
     padding: 20px 5px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    overflow-y: auto;
+    overflow-y: visible; /* IMPORTANT */
+    overflow-x: visible; /* ADDED */
     transition: width 0.3s ease, padding 0.3s ease;
     z-index: 100;
 }
 
 /* Expanded Sidebar */
 .sidebar.expanded {
-    width: 250px; /* or any width you prefer */
+    width: 500px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* Optional: Hide text when collapsed */
 .sidebar:not(.expanded) .link-text {
     display: none;
 }
+
 .sidebar-toggle-btn {
     position: fixed;
     top: 20px;
-    right: 20px; /* 👈 Move to the right */
+    right: 20px;
     z-index: 200;
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
@@ -403,29 +404,15 @@ p {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-/* Expand sidebar on hover */
+/* Expand on hover */
 .sidebar:hover {
-    width: 500px; /* expanded width */
-    padding: 20px 30px; /* more padding when expanded */
+    width: 500px;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.4);
+
 }
 
-/* Logo */
-
-
-/* Logo image always visible */
-
-/* Logo text: hide when collapsed */
-
-/* Show logo text on hover */
-.sidebar:hover .logo h2 {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Links container */
+/* Section headers */
 .links h4 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -437,16 +424,18 @@ p {
     transition: opacity 0.3s ease;
 }
 
-/* Show section headers on hover */
+/* Show headers on hover */
 .sidebar:hover .links h4 {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Lists reset */
+/* Reset list styles */
 .links ul,
 .links ul ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Nav item */
@@ -454,12 +443,12 @@ p {
     position: relative;
 }
 
-/* Nav links: hide text and padding when collapsed */
+/* Nav links */
 .nav-link {
     display: flex;
     align-items: center;
     padding: 10px 10px;
-    color: 07294d;
+    color: grey;
     font-size: 1rem;
     text-decoration: none;
     border-radius: 8px;
@@ -467,81 +456,91 @@ p {
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-/* On hover */
 .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffc600;
 }
 
-/* When collapsed, reduce padding and hide text */
+/* Collapsed sidebar behavior */
 .sidebar:not(:hover) .nav-link {
     padding-left: 8px;
     width: 32px;
 }
 
-/* Hide link text when collapsed */
 .sidebar:not(:hover) .nav-link .link-text {
     display: none;
 }
 
-/* Show link text when expanded */
 .sidebar:hover .nav-link .link-text {
     display: inline-block;
 }
 
-/* Submenu base style */
-.sub-menu,
-.sub-sub-menu {
-    max-height: 0;
-    overflow: hidden;
-    padding-left: 15px;
-    margin-top: 5px;
+/* Submenu */
+.sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* display to the right */
+    min-width: 220px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-left: 2px solid rgba(255, 255, 255, 0.2);
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 15px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999; /* on top */
+    white-space: nowrap;
+}
+
+/* Show submenu */
+.sidebar:hover .nav-list-item:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Submenu items */
-.sub-menu li,
-.sub-sub-menu li {
-    margin-bottom: 5px;
+.sub-menu li {
+    margin-bottom: 10px;
 }
 
-/* Submenu links */
-.sub-menu li a,
-.sub-sub-menu li a {
-    font-size: 0.9rem;
-    padding: 6px 10px;
+.sub-menu li a {
     display: block;
-    color: #ddd;
+    color: #fff;
+    padding: 6px 10px;
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-/* Submenu link hover */
-.sub-menu li a:hover,
-.sub-sub-menu li a:hover {
+.sub-menu li a:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
 }
 
-/* Expand submenu only when sidebar and nav item hovered */
-.sidebar:hover .nav-item:hover > .sub-menu {
-    max-height: 500px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 /* Nested submenu */
-.sub-menu li:hover > .sub-sub-menu {
-    max-height: 500px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+.sub-sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    display: none;
 }
 
-/* Scrollbar style for sidebar */
+.sub-menu li:hover > .sub-sub-menu {
+    display: block;
+}
+
+/* Scrollbar */
 .sidebar::-webkit-scrollbar {
     width: 6px;
 }
@@ -555,13 +554,14 @@ p {
     background: transparent;
 }
 
-/* Responsive */
+/* Mobile fix */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
         height: auto;
         border-radius: 0;
         padding: 15px;
+        overflow-x: visible;
     }
 }
 
