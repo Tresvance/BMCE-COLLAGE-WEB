@@ -267,56 +267,205 @@
 
 
     <!--====== SLIDER PART START ======-->
-    
-    <section id="slider-part" class="slider-active">
-
-        <!-- <div class="mainvideo">
-
-            <video class="mainvideo__bg" autoplay muted loop playsinline>
-              <source src="https://res.cloudinary.com/dslecvcak/video/upload/v1747163160/udykfocp3lrcrgdr5rht.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+    <section id="slider-part" class="slider-split">
+    <div class="slider-left">
+        <div class="programs-slider-container">
+    <div class="program-slides">
+        <div class="program-slide active">
+            <div class="program-content">
+                <h2 class="program-title">B.Tech</h2>
+                <p class="program-description">4-year Bachelor of Technology program with specialized engineering disciplines and hands-on industry experience.</p>
+            </div>
         </div>
-           -->
-       <!-- Slider 1 -->
-        <div class="single-slider bg_cover uniform-slider" style="background-image: url(images/slider/bmce1.jpg)" data-overlay="4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">"Engineering is the closest thing to magic that exists in the world" - Elon Musk</h1>
-                            <ul>
-                                <li><a class="main-btn" href="about.html">Read More</a></li>
-                                <li><a class="main-btn main-btn-2" href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>        
-            </div>       
+        <div class="program-slide">
+            <div class="program-content">
+                <h2 class="program-title">MBA</h2>
+                <p class="program-description">2-year Master of Business Administration program with industry-focused specializations and leadership development.</p>
+            </div>
         </div>
-
-        <!-- Slider 2 -->
-        <div class="single-slider bg_cover uniform-slider" style="background-image: url(images/slider/bmce2.jpg)" data-overlay="4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">"Innovation distinguishes between a leader and a follower" - Steve Jobs</h1>
-                            <ul>
-                                <li><a class="main-btn" href="#">Learn More</a></li>
-                                <li><a class="main-btn main-btn-2" href="#">Get in Touch</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>        
-            </div>       
+        <div class="program-slide">
+            <div class="program-content">
+                <h2 class="program-title">Diploma</h2>
+                <p class="program-description">3-year technical diploma programs designed to create industry-ready professionals with practical skills.</p>
+            </div>
         </div>
+    </div>
 
-    
+ 
+</div>
+
+<style>
+    .programs-slider-container {
+        font-family: 'Segoe UI', sans-serif;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 2rem;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .program-slides {
+        width: 700px;
+        position: relative;
+        height: 200px;
+    }
+
+    .program-slide {
+        position: absolute;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 0.8s ease-in-out;
+        width: 100%;
+    }
+
+    .program-slide.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .program-content {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .program-title {
+        font-size: 7rem;
+        /* color: #003366; */
+        color:#00d2ff;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    .program-description {
+        font-size: 1.5rem;
+        color: #333;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+        gap: 10px;
+    }
+
+ 
+
+    @media (max-width: 600px) {
+        .program-title {
+            font-size: 1.8rem;
+        }
+
+        .program-description {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.program-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function activateSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    // Auto-slide every 3 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        activateSlide(currentSlide);
+    }, 3000);
+
+    // Dot click event
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => activateSlide(index));
+    });
+</script>
 
         
+    </div>
+    <div class="slider-right" id="sliderImageContainer"></div>
+</section>
+<style>
+    #slider-part {
+        display: flex;
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    .slider-left {
+        width: 50%;
+        background-color: white; /* Or any background you want */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        color: #333;
+    }
+
+    .slider-right {
+        width: 60%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out;
+
         
-    </section>
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+
+    overflow: hidden;
+    }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+   
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    @media (max-width: 768px) {
+        #slider-part {
+            flex-direction: column;
+        }
+        .slider-left, .slider-right {
+            width: 100%;
+            height: 50%;
+        }
+    }
+</style>
+
+<script>
+    const images = [
+        'images/slider/bmce1.jpg',
+        'images/slider/bmce2.jpg',
+        // Add more image paths if needed
+    ];
+
+    let currentIndex = 0;
+    const sliderContainer = document.getElementById('sliderImageContainer');
+
+    function changeImage() {
+        sliderContainer.style.backgroundImage = `url('${images[currentIndex]}')`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    changeImage(); // Initial load
+    setInterval(changeImage, 3000); // Rotate every 5 seconds
+</script>
+
+
+
     
     <!--====== SLIDER PART ENDS ======-->
    
@@ -342,7 +491,7 @@
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-6 offset-lg-1" >
-                    <div class="about-event mt-50">
+                    <div class="about-event mt-20">
                         <div class="event-title" data-aos="zoom-in-up" data-aos-duration="1500">
                             <h3>Upcoming events</h3>
                         </div> <!-- event title -->
@@ -364,7 +513,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="singel-event" data-aos="zoom-in-up">
+                                <div class="singel-event" data-aos="zoom-in-up" data-aos-duration="1500">
                                     <span><i class="fa fa-calendar"></i> 2 December 2018</span>
                                     <a href="events-singel.html"><h4>Environment conference</h4></a>
                                     <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
@@ -372,6 +521,9 @@
                                 </div>
                             </li>
                         </ul> 
+                        <div class="text-center mt-4">
+                                <a href="all-events.html" class="btn btn-yellow">Read More</a>
+                            </div>
                     </div> <!-- about event -->
                 </div>
             </div> <!-- row -->
