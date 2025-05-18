@@ -173,13 +173,28 @@ p {
 	margin: 0px;
 }
 
-.bg_cover{
+/* .bg_cover{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+} */
+
+.uniform-slider {
+    height: 600px; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 }
+@media (max-width: 768px) {
+    .uniform-slider {
+        height: 300px;
+    }
+}
+
 
 /*===== All Button Style =====*/
 
@@ -317,7 +332,7 @@ p {
 
 .header-logo-support{
     /* border-bottom: 1px solid #cecece; */
-    margin-bottom: -40px;
+    margin-bottom: 10px;
 }
 
 .support-button{}
