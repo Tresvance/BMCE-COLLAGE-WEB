@@ -3149,6 +3149,24 @@ p {
     font-size: 14px;
     color: #505050;
 }
+.btn-yellow {
+    background-color: #ffc600; /* Bootstrap warning yellow */
+    color: #000;
+    padding: 10px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background-color: #ffc600;
+    color: #fff;
+    text-decoration: none;
+}
+
+
 
 #contact-map{
     width: 100%;
