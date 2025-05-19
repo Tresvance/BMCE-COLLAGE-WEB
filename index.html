@@ -269,128 +269,353 @@
     <!--====== SLIDER PART START ======-->
     <section id="slider-part" class="slider-split">
     <div class="slider-left">
+        <div class="slider-left">
+    <style>
+        /* Main container styling */
+        .college-showcase-container {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', sans-serif;
+            background: transparent;
+            border-radius: 15px;
+            overflow: hidden;
+            color: #333;
+            padding: 1.5rem; /* Reduced padding */
+            position: relative;
+            margin-top: -30px; /* Move container up */
+        }
+
+        /* Animation for all elements to slide from left */
+        @keyframes slideFromLeft {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Top section with college info */
+        .college-info {
+            position: relative;
+            z-index: 1;
+            text-align: left;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 2px solid rgba(0, 210, 255, 0.2);
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: slideFromLeft 1s forwards ease-out;
+        }
+        .college-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #0088cc, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s infinite;
+            transition: color 0.5s ease;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        /* Stats section */
+        .college-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 1;
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: slideFromLeft 1s forwards ease-out 0.2s; /* Added animation */
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(0, 210, 255, 0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            flex: 1;
+            margin: 0 0.5rem;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 210, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0088cc;
+            margin-bottom: 0.5rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .stat-number::after {
+            content: "+";
+            position: absolute;
+            font-size: 1.5rem;
+            top: 0;
+        }
+
+        .stat-item:hover .stat-number {
+            color: #00d2ff;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .stat-item:hover .stat-label {
+            color: #333;
+        }
+
+        /* Programs slider styling */
+        .programs-slider-container {
+            position: relative;
+            z-index: 1;
+            margin: 1.5rem 0; /* Reduced margin */
+            padding: 1.5rem; /* Reduced padding */
+            overflow: hidden;
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: slideFromLeft 1s forwards ease-out 0.4s;
+        }
+
+        .slider-heading {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #0088cc;
+            transition: color 0.3s ease;
+        }
+        
+        .slider-heading::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #00d2ff;
+            animation: lineGrow 2s forwards ease-out;
+        }
+        
+        @keyframes lineGrow {
+            to { width: 100%; }
+        }
+
+        .programs-slider-container:hover .slider-heading {
+            color: #00d2ff;
+        }
+
+        .program-slides {
+            position: relative;
+            height: 250px;
+            width: 100%;
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: slideFromLeft 1s forwards ease-out 0.6s; /* Added animation */
+        }
+
+        .program-slide {
+            position: absolute;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            width: 100%;
+        }
+
+        .program-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .program-content {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .program-title {
+            font-size: 5rem; /* Slightly reduced size */
+            color: #0088cc;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px rgba(0, 210, 255, 0.2);
+            position: relative;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .program-slide.active:hover .program-title {
+            color: #00d2ff;
+            text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .program-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(to right, #0088cc, #00d2ff);
+            transition: width 0.3s ease;
+        }
+
+        .program-slide.active:hover .program-title::after {
+            width: 80px;
+        }
+
+        .program-description {
+            font-size: 1.4rem;
+            color: #555;
+            max-width: 90%;
+            margin: 1.5rem auto 0;
+            transition: color 0.3s ease;
+        }
+
+        .program-slide.active:hover .program-description {
+            color: #333;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            gap: 10px;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .college-name {
+                font-size: 1.8rem;
+            }
+            
+            .program-title {
+                font-size: 3.5rem;
+            }
+            
+            .program-description {
+                font-size: 1.2rem;
+            }
+            
+            .college-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                margin: 0.5rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .program-title {
+                font-size: 2.8rem;
+            }
+            
+            .program-description {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <div class="college-showcase-container">
+        <!-- College information section -->
+        <div class="college-info">
+            <h1 class="college-name">BASELIOS MATHEWS II COLLEGE OF ENGINEERING</h1>
+            
+            <div class="college-stats">
+                <div class="stat-item">
+                    <div class="stat-number">95</div>
+                    <div class="stat-label">Placement Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50</div>
+                    <div class="stat-label">Industry Partners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Experienced Faculty</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Programs slider -->
         <div class="programs-slider-container">
-    <div class="program-slides">
-        <div class="program-slide active">
-            <div class="program-content">
-                <h2 class="program-title">B.Tech</h2>
-                <p class="program-description">4-year Bachelor of Technology program with specialized engineering disciplines and hands-on industry experience.</p>
-            </div>
-        </div>
-        <div class="program-slide">
-            <div class="program-content">
-                <h2 class="program-title">MBA</h2>
-                <p class="program-description">2-year Master of Business Administration program with industry-focused specializations and leadership development.</p>
-            </div>
-        </div>
-        <div class="program-slide">
-            <div class="program-content">
-                <h2 class="program-title">Diploma</h2>
-                <p class="program-description">3-year technical diploma programs designed to create industry-ready professionals with practical skills.</p>
+            <h2 class="slider-heading">Our Programs</h2>
+            
+            <div class="program-slides">
+                <div class="program-slide active">
+                    <div class="program-content">
+                        <h2 class="program-title">B.Tech</h2>
+                        <p class="program-description">4-year Bachelor of Technology program with specialized engineering disciplines and hands-on industry experience.</p>
+                    </div>
+                </div>
+                <div class="program-slide">
+                    <div class="program-content">
+                        <h2 class="program-title">MBA</h2>
+                        <p class="program-description">2-year Master of Business Administration program with industry-focused specializations and leadership development.</p>
+                    </div>
+                </div>
+                <div class="program-slide">
+                    <div class="program-content">
+                        <h2 class="program-title">Diploma</h2>
+                        <p class="program-description">3-year technical diploma programs designed to create industry-ready professionals with practical skills.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
- 
+    <script>
+        // Initialize program slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.program-slide');
+
+        function activateSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        // Auto-slide every 4 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            activateSlide(currentSlide);
+        }, 4000);
+    </script>
 </div>
+   
+  
 
-<style>
-    .programs-slider-container {
-        font-family: 'Segoe UI', sans-serif;
-        max-width: 700px;
-        margin: 40px auto;
-        padding: 2rem;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .program-slides {
-        width: 700px;
-        position: relative;
-        height: 200px;
-    }
-
-    .program-slide {
-        position: absolute;
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: all 0.8s ease-in-out;
-        width: 100%;
-    }
-
-    .program-slide.active {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .program-content {
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .program-title {
-        font-size: 7rem;
-        /* color: #003366; */
-        color:#00d2ff;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-    }
-
-    .program-description {
-        font-size: 1.5rem;
-        color: #333;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .slider-dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5rem;
-        gap: 10px;
-    }
-
- 
-
-    @media (max-width: 600px) {
-        .program-title {
-            font-size: 1.8rem;
-        }
-
-        .program-description {
-            font-size: 1rem;
-        }
-    }
-</style>
-
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.program-slide');
-    const dots = document.querySelectorAll('.dot');
-
-    function activateSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        currentSlide = index;
-    }
-
-    // Auto-slide every 3 seconds
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        activateSlide(currentSlide);
-    }, 3000);
-
-    // Dot click event
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => activateSlide(index));
-    });
-</script>
-
+     
         
     </div>
     <div class="slider-right" id="sliderImageContainer"></div>
