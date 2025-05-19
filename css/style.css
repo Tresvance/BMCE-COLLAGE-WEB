@@ -98,6 +98,7 @@
     height: 110%;
     object-fit: cover;
     z-index: -1;
+
   }
   
   @keyframes scroll-left {
@@ -298,7 +299,9 @@ p {
 /*===== Header top =====*/
 
 .header-top{
-    background-color: #07294d;
+    /* background-color: #07294d; */
+    /* background-color: #0ec4c4ff; */
+    background: linear-gradient(to right, #3a47d5, #00d2ff);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -379,7 +382,8 @@ p {
     left: 0;
     width: 50px;
     height: 100vh;
-    background: #07294d;
+    /* background: #07294d; */
+    background: linear-gradient(to right, #3a47d5, #00d2ff);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -4576,12 +4580,13 @@ placment page  css */
             }
         }
 
-
 .events-container {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  padding: 40px 0;
+  padding: 40px 40px;
+  width: 88%;              /* or any fixed width like 1000px */
+  margin: 0 auto; 
 }
 
 .vertical-label {
@@ -4607,15 +4612,24 @@ placment page  css */
 
 .event-card {
   width: 400px;
-  background: #fdf8f9;
+  background: #082e57;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
 .event-image {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  height: 540px; /* Increased height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .event-date {
@@ -4642,7 +4656,9 @@ placment page  css */
 .event-title {
   padding: 20px;
   font-size: 18px;
-  color: #333;
+  color: white;
+  font-weight: bold;      /* Make text bold */
+  text-align: center;     /* Center the text */
 }
 
 .slider-controls {
