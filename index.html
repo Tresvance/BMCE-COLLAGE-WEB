@@ -269,21 +269,25 @@
     <!--====== SLIDER PART START ======-->
     <section id="slider-part" class="slider-split">
     <div class="slider-left">
-        <div class="slider-left">
     <style>
         /* Main container styling */
         .college-showcase-container {
             display: flex;
             flex-direction: column;
+            width: 100%; /* Let it take full width of parent */
+            max-width: 1200px; /* Prevent it from becoming too wide on large screens */
             font-family: 'Segoe UI', sans-serif;
             background: transparent;
             border-radius: 15px;
             overflow: hidden;
             color: #333;
-            padding: 1.5rem; /* Reduced padding */
+            padding: 1.5rem;
             position: relative;
-            margin-top: -30px; /* Move container up */
+            margin: -30px auto 0 auto; /* Move it up and center it */
+            
+            box-sizing: border-box; /* Important to include padding inside width */
         }
+
 
         /* Animation for all elements to slide from left */
         @keyframes slideFromLeft {
@@ -297,7 +301,8 @@
         .college-info {
             position: relative;
             z-index: 1;
-            text-align: left;
+            width: auto;
+            text-align: center;
             margin-bottom: 1.5rem;
             padding-bottom: 1.2rem;
             border-bottom: 2px solid rgba(0, 210, 255, 0.2);
