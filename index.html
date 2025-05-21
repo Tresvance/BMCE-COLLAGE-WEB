@@ -191,14 +191,23 @@
         </aside>
         <button id="sidebar-toggle" class="sidebar-toggle-btn">☰</button>
 <!--====== SIDEBAR ENDS ======-->
-        <script>
-        const toggleBtn = document.getElementById("sidebar-toggle");
-        const sidebar = document.querySelector(".sidebar");
-
-        toggleBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("expanded");
-        });
-        </script>
+<script>
+    const toggleBtn = document.getElementById("sidebar-toggle");
+    const sidebar = document.querySelector(".sidebar");
+  
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("expanded");
+  
+      // Toggle icon between ☰ and ✖
+      if (sidebar.classList.contains("expanded")) {
+        toggleBtn.textContent = "✖";
+        toggleBtn.style.transform = "rotate(90deg)";
+      } else {
+        toggleBtn.textContent = "☰";
+        toggleBtn.style.transform = "rotate(0deg)";
+      }
+    });
+  </script>
     
     <!--====== HEADER PART START ======-->
     

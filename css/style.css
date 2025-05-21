@@ -412,16 +412,19 @@ p {
 .sidebar-toggle-btn {
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 6px;
     z-index: 200;
-    background-color: rgba(255, 255, 255, 0.8);
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 3px;
+    padding: 0px;
     cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 45px;
+    background: transparent;    /* Remove background */
+    color: white;               /* Set icon color to white */
+    box-shadow: none;           /* No shadow */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
 
 /* Expand on hover */
 /* .sidebar:hover {
